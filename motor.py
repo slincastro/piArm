@@ -62,13 +62,16 @@ def Down(numTimes,speed):
         print "Done"
                 
 iterations = 1#raw_input("Enter total number of times to blink: ")
-action = raw_input("enter an action <o|c>: ")
 
-if action == "o":
-    Open(int(iterations),float(0.2))
-elif action == "c":
-    Close(int(iterations),float(0.2))
-elif action == "u":
-    Up(int(iterations),float(0.2))
-elif action == "d":
-    Down(int(iterations),float(0.2))
+while True:
+    action = raw_input("enter an action <o|c>: ")
+    if action == "o":
+        Open(int(iterations),float(0.2))
+    elif action == "c":
+        Close(int(iterations),float(0.2))
+    elif action == "u":
+        Up(int(iterations),float(0.2))
+    elif action == "d":
+        Down(int(iterations),float(0.2))
+    else :
+        break
