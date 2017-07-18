@@ -1,5 +1,7 @@
+import sys
+sys.path.append('../../')
 import unittest
-from motor import Motor
+from src.control.motor import Motor
 
 
 class TestControl(unittest.TestCase):
@@ -28,6 +30,7 @@ class TestControl(unittest.TestCase):
 
     def test_should_stop_motor(self):
         motor = Motor()
+        motor.left()
         motor.stop()
         self.assertEqual(False, motor.input_a)
         self.assertEqual(False, motor.input_b)
