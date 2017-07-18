@@ -3,16 +3,20 @@ import sys
 sys.path.append('../../')
 from src.main.control import Control
 from src.main.motor import Motor
+from src.main.converter import Converter
 
 
 class TestControl(unittest.TestCase):
 
+    def test_should_return_01_seconds(self):
+        convert = Converter()
+        seconds = convert.to_seconds(10)
+        self.assertEqual(0.1, seconds)
 
-    def test_should_move_10_degrees_left(self):
-        motor = Motor()
-        move = Control(motor)
-        move.turn_left(10)
-        self.assertEqual(True, False)
+    def test_should_return_02_seconds(self):
+        convert = Converter()
+        seconds = convert.to_seconds(20)
+        self.assertEqual(0.2, seconds)
 
 
 if __name__ == '__main__':
