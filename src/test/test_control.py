@@ -4,9 +4,14 @@ sys.path.append('../../')
 from src.main.control import Control
 from src.main.motor import Motor
 from src.main.converter import Converter
+from configuration_test import Configuration
 
 
 class TestControl(unittest.TestCase):
+
+    def setUp(self):
+        config = Configuration()
+        config.configure_test()
 
     def test_should_return_01_seconds(self):
         convert = Converter()
