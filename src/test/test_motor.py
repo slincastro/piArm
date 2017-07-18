@@ -1,10 +1,11 @@
 import sys
 sys.path.append('../../')
 import unittest
-from src.control.motor import Motor
+from src.main.motor import Motor
 
 
-class TestControl(unittest.TestCase):
+class TestMotor(unittest.TestCase):
+
     def test_should_turn_left(self):
         shoulder = Motor()
         shoulder.left()
