@@ -12,4 +12,5 @@ class Control:
     def turn_left(self, degrees):
         self._motor.left()
         self._executor.move(self._motor, degrees)
+        self._motor.stop()
 

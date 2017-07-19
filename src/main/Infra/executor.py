@@ -1,10 +1,14 @@
 import RPi.GPIO as GPIO
 import time
 
+
 class Executor:
 
-    def move(self, motor, degrees):
+    def __init__(self):
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(motor._pinA, GPIO.OUT)
-        GPIO.setup(motor._pinB, GPIO.OUT)
 
+    def move(self, motor, seconds):
+        GPIO.setup(motor.pin_a, GPIO.OUT)
+        GPIO.setup(motor.pin_b, GPIO.OUT)
+        GPIO.output(motor.pin_a, motor.input_a)
+        time.sleep(seconds)

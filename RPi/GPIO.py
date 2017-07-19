@@ -10,3 +10,11 @@ def setmode(BCM):
 
 def setup(_pinA, OUT):
     return None
+
+
+def BCM():
+    return None
+
+
+def output(pin_a, input_a):
+    return None

@@ -1,11 +1,11 @@
 
 
 class Motor:
-    def __init__(self,pinA,pinB):
+    def __init__(self, pin_a, pin_b):
         self._inputA = False
         self._inputB = False
-        self._pinA = pinA
-        self._pinB = pinB
+        self._pinA = pin_a
+        self._pinB = pin_b
 
     @property
     def input_a(self):

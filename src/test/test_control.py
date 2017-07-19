@@ -28,12 +28,17 @@ class TestControl(unittest.TestCase):
 
     def test_should_turn_left_02_seconds(self):
         executor = Executor()
-        motor = Motor(0,0)
+        motor = Motor(0, 0)
+        motor.left = MagicMock()
+        motor.stop = MagicMock()
 
         control = Control(motor, executor)
         executor.move = MagicMock()
         control.turn_left(10)
+
         executor.move.assert_called_with(motor, 10)
+        motor.left.assert_called_with()
+        motor.stop.assert_called_with()
 
 if __name__ == '__main__':
     unittest.main()
