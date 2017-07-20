@@ -1,6 +1,5 @@
 import sys
 import unittest
-#from unittest.mock import MagicMock
 from mock import MagicMock
 sys.path.append('../../')
 from src.main.motor import Motor
@@ -29,14 +28,15 @@ class TestControl(unittest.TestCase):
     def test_should_turn_left_02_seconds(self):
         executor = Executor()
         motor = Motor(0, 0)
+        control = Control(motor, executor)
+
         motor.left = MagicMock()
         motor.stop = MagicMock()
-
-        control = Control(motor, executor)
         executor.move = MagicMock()
+
         control.turn_left(10)
 
-        executor.move.assert_called_with(motor, 10)
+        executor.move.assert_called_with(motor, 0.1)
         motor.left.assert_called_with()
         motor.stop.assert_called_with()
 

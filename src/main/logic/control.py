@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../../')
-from src.main.Infra.executor import Executor
+from src.main.logic.converter import Converter
 
 
 class Control:
@@ -11,6 +11,8 @@ class Control:
 
     def turn_left(self, degrees):
         self._motor.left()
-        self._executor.move(self._motor, degrees)
+        converter = Converter()
+        seconds = converter.to_seconds(degrees)
+        self._executor.move(self._motor, seconds)
         self._motor.stop()
 
