@@ -12,11 +12,12 @@ waist = Motor(13, 19)
 arm = Arm(waist)
 
 while True:
-    action = raw_input("enter an junture <o|c>: ")
+    junture = raw_input("enter an junture <w>: ")
+    angle = raw_input("enter an angle <int>: ")
 
-    motor = arm.get_motor(action)
+    motor = arm.get_motor(junture)
     control = Control(motor, executor)
-    control.turn_left(10)
+    control.turn_left(angle)
 
 
 
