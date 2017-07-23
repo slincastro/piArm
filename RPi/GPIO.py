@@ -18,3 +18,7 @@ def BCM():
 
 def output(pin_a, input_a):
     return None
+
+
+def OUT():
+    return None

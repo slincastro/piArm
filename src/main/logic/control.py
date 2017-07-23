@@ -11,6 +11,7 @@ class Control:
 
     def turn_left(self, degrees):
         self._motor.left()
+        print "move left " + str(degrees) + " degrees"
         converter = Converter()
         seconds = converter.to_seconds(degrees)
         self._executor.move(self._motor, seconds)

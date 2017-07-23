@@ -50,6 +50,7 @@ def Up(numTimes,speed):
         print "Done"
 
 def Down(numTimes,speed):
+
     for i in range(0,numTimes):
         print "Iteration " + str(i+1)
 

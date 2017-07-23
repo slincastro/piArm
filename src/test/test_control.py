@@ -7,6 +7,7 @@ from src.main.logic.control import Control
 from src.main.logic.converter import Converter
 from src.test.configuration.configuration_test import Configuration
 from src.main.Infra.executor import Executor
+from src.main.arm import Arm
 
 
 class TestControl(unittest.TestCase):
@@ -39,6 +40,13 @@ class TestControl(unittest.TestCase):
         executor.move.assert_called_with(motor, 0.1)
         motor.left.assert_called_with()
         motor.stop.assert_called_with()
+
+    def test_should_return_waist(self):
+        waist=Motor(13, 19)
+        arm = Arm(waist)
+
+        self.assertEquals(waist,arm.waist)
+
 
 if __name__ == '__main__':
     unittest.main()
