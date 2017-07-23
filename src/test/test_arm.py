@@ -29,3 +29,12 @@ class TestArm(unittest.TestCase):
         self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
         self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
 
+    def test_should_return_waist_motor(self):
+        expected_motor = Motor(13, 19)
+        waist = Motor(13, 19)
+        arm = Arm(waist)
+
+        current_waist = arm.get_motor("x")
+
+        self.assertIsNone(current_waist)
+

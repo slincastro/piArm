@@ -10,6 +10,10 @@ class Arm:
         return self._waist
 
     def get_motor(self, param):
-        return self._waist
-
+        if param == "w":
+            print "waist is selected ..."
+            return self._waist
+        else:
+            print "no motor selected ..."
+            return None
 
