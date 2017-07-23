@@ -12,8 +12,9 @@ executor = Executor()
 waist = Motor(13, 19)
 shoulder = Motor(23, 24)
 elbow = Motor(17, 27)
+wrist = Motor()
 
-arm = Arm(waist, shoulder, elbow)
+arm = Arm(waist, shoulder)
 
 while True:
     junture = raw_input("enter an junture <w>: ")
