@@ -34,14 +34,12 @@ class TestControl(unittest.TestCase):
         motor.left = MagicMock()
         motor.stop = MagicMock()
         executor.move = MagicMock()
-        executor.stop = MagicMock()
 
         control.turn_left(10)
 
-        executor.move.assert_called_with(motor, 0.1)
+        executor.move.assert_called_with(motor)
         motor.left.assert_called_with()
         motor.stop.assert_called_with()
-        executor.stop.assert_called_with(motor)
 
     def test_should_turn_right_02_degrees(self):
         executor = Executor()
@@ -51,14 +49,13 @@ class TestControl(unittest.TestCase):
         motor.right = MagicMock()
         motor.stop = MagicMock()
         executor.move = MagicMock()
-        executor.stop = MagicMock()
 
         control.turn_right(10)
 
-        executor.move.assert_called_with(motor, 0.1)
+        executor.move.assert_called_with(motor)
         motor.right.assert_called_with()
         motor.stop.assert_called_with()
-        executor.stop.assert_called_with(motor)
+
 
 if __name__ == '__main__':
     unittest.main()
