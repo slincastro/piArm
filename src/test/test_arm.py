@@ -65,17 +65,7 @@ class TestArm(unittest.TestCase):
         self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
         self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
 
-    def test_shoul_return_gripper_motor(self):
-        expected_motor = Motor(1, 2)
-        wrist = Motor(1, 2)
-        arm = Arm(None, None, None, wrist)
 
-        current_waist = arm.get_motor("g")
-
-        self.assertEquals(expected_motor.input_a, current_waist.input_a)
-        self.assertEquals(expected_motor.input_b, current_waist.input_b)
-        self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
 
     def test_should_return_none_motor(self):
         waist = Motor(13, 19)
