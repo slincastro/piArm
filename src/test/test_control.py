@@ -34,12 +34,14 @@ class TestControl(unittest.TestCase):
         motor.left = MagicMock()
         motor.stop = MagicMock()
         executor.move = MagicMock()
+        executor.stop = MagicMock()
 
         control.turn_left(10)
 
         executor.move.assert_called_with(motor, 0.1)
         motor.left.assert_called_with()
         motor.stop.assert_called_with()
+        executor.stop.assert_called_with(motor)
 
     def test_should_return_waist(self):
         waist=Motor(13, 19)

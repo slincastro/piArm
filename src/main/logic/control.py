@@ -16,4 +16,5 @@ class Control:
         seconds = converter.to_seconds(degrees)
         self._executor.move(self._motor, seconds)
         self._motor.stop()
+        self._executor.stop(self._motor)
 
