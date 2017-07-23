@@ -2,7 +2,8 @@
 
 class Arm:
 
-    def __init__(self, waist, shoulder, elbow, wrist):
+    def __init__(self, waist, shoulder, elbow, wrist, gripper):
+        self._gripper = gripper
         self._wrist = wrist
         self._waist = waist
         self._shoulder = shoulder
@@ -36,6 +37,10 @@ class Arm:
         elif param == "u":
             print "wrist is selected ..."
             return self._wrist
+
+        elif param == "g":
+            print "gripper is selected ..."
+            return self._gripper
 
         else:
             print "no motor selected ..."

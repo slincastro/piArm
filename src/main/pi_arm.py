@@ -13,8 +13,9 @@ waist = Motor(13, 19)
 shoulder = Motor(23, 24)
 elbow = Motor(17, 27)
 wrist = Motor(16, 20)
+gripper = Motor(5, 6)
 
-arm = Arm(waist, shoulder, elbow, wrist)
+arm = Arm(waist, shoulder, elbow, wrist, gripper)
 
 while True:
     junture = raw_input("enter an junture <w>: ")
