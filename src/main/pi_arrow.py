@@ -19,11 +19,13 @@ arm = Arm(waist, shoulder, elbow, wrist, gripper)
 
 while True:
     junture = raw_input("enter an junture <w>: ")
-    direction = raw_input("enter a direction <l|r>")
+    direction = raw_input("enter a direction <l|r> : ")
 
     motor = arm.get_motor(junture)
     control = Control(motor, executor)
 
+    print "commando " + direction
+    
     if direction == "^[[A":
         control.turn_left(float(10))
     elif direction == "^[[B":
