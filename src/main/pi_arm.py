@@ -14,10 +14,15 @@ arm = Arm(waist)
 while True:
     junture = raw_input("enter an junture <w>: ")
     angle = raw_input("enter an angle <int>: ")
+    direction =raw_input("enter a direction <l|r>")
 
     motor = arm.get_motor(junture)
     control = Control(motor, executor)
-    control.turn_left(float(angle))
 
-
+    if direction == "l":
+        control.turn_left(float(angle))
+    elif direction == "r":
+        control.turn_right(float(angle))
+    else:
+        print "choose junture an direction again ."
 

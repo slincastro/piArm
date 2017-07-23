@@ -18,3 +18,13 @@ class Control:
         self._motor.stop()
         self._executor.stop(self._motor)
 
+    def turn_right(self, degrees):
+        self._motor.right()
+        print "move right " + str(degrees) + " degrees"
+        converter = Converter()
+        seconds = converter.to_seconds(degrees)
+        self._executor.move(self._motor, seconds)
+        self._motor.stop()
+        self._executor.stop(self._motor)
+        pass
+

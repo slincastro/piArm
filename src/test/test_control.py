@@ -26,7 +26,7 @@ class TestControl(unittest.TestCase):
         seconds = convert.to_seconds(20)
         self.assertEqual(0.2, seconds)
 
-    def test_should_turn_left_02_seconds(self):
+    def test_should_turn_left_02_degrees(self):
         executor = Executor()
         motor = Motor(0, 0)
         control = Control(motor, executor)
@@ -43,12 +43,22 @@ class TestControl(unittest.TestCase):
         motor.stop.assert_called_with()
         executor.stop.assert_called_with(motor)
 
-    def test_should_return_waist(self):
-        waist=Motor(13, 19)
-        arm = Arm(waist)
+    def test_should_turn_right_02_degrees(self):
+        executor = Executor()
+        motor = Motor(0, 0)
+        control = Control(motor, executor)
 
-        self.assertEquals(waist,arm.waist)
+        motor.right = MagicMock()
+        motor.stop = MagicMock()
+        executor.move = MagicMock()
+        executor.stop = MagicMock()
 
+        control.turn_right(10)
+
+        executor.move.assert_called_with(motor, 0.1)
+        motor.right.assert_called_with()
+        motor.stop.assert_called_with()
+        executor.stop.assert_called_with(motor)
 
 if __name__ == '__main__':
     unittest.main()
