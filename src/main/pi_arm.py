@@ -8,9 +8,12 @@ from src.main.arm import Arm
 
 Configuration().configure()
 executor = Executor()
+
 waist = Motor(13, 19)
 shoulder = Motor(23, 24)
-arm = Arm(waist, shoulder)
+elbow = Motor(17, 27)
+
+arm = Arm(waist, shoulder, elbow)
 
 while True:
     junture = raw_input("enter an junture <w>: ")
