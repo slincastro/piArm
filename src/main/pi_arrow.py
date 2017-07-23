@@ -1,4 +1,5 @@
 import sys
+import readline
 sys.path.append('../../')
 from src.main.Infra.executor import Executor
 from src.main.logic.control import Control
@@ -24,8 +25,8 @@ while True:
     motor = arm.get_motor(junture)
     control = Control(motor, executor)
 
-    print "commando " + direction
-    
+    print "comando " + direction
+
     if direction == "^[[A":
         control.turn_left(float(10))
     elif direction == "^[[B":
