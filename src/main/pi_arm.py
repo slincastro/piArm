@@ -17,7 +17,7 @@ while True:
 
     motor = arm.get_motor(junture)
     control = Control(motor, executor)
-    control.turn_left(angle)
+    control.turn_left(float(angle))
 
 
 
