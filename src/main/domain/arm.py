@@ -26,6 +26,18 @@ class Arm:
     def elbow(self):
         return self._elbow
 
+    @property
+    def wrist(self):
+        return self._wrist
+
+    @property
+    def elbow(self):
+        return self._elbow
+
+    @property
+    def gripper(self):
+        return self._gripper
+
     def get_motor(self, param):
         if param == "w":
             print "waist is selected ..."
