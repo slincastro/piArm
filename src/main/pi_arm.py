@@ -21,9 +21,12 @@ led = Pin(21)
 arm = Arm(waist, shoulder, elbow, wrist, gripper, led)
 
 while True:
-    junture = raw_input("enter an junture <w>: ")
-    angle = raw_input("enter an angle <int>: ")
-    direction = raw_input("enter a direction <l|r>")
+
+    print "Enter a Junture :"
+    junture = raw_input(" < w | s | e | u | g | l > : ")
+    angle = raw_input("enter an angle <int> : ")
+    print "Enter a direction"
+    direction = raw_input("< l | r | u | d > : ")
 
     motor = arm.get_motor(junture)
     control = Control(motor, executor, led)
@@ -31,6 +34,10 @@ while True:
     if direction == "l":
         control.turn_left(float(angle))
     elif direction == "r":
+        control.turn_right(float(angle))
+    if direction == "u":
+        control.turn_left(float(angle))
+    elif direction == "d":
         control.turn_right(float(angle))
     elif direction == "o":
         control.turn_on_led()
