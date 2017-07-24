@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../../')
 import unittest
-from src.main.motor import Motor
+from src.main.domain.motor import Motor
 
 
 class TestMotor(unittest.TestCase):

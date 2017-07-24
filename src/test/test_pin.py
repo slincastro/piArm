@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../../')
 import unittest
-from src.main.pin import Pin
+from src.main.domain.pin import Pin
 
 
 class TestPin(unittest.TestCase):

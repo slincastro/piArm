@@ -1,11 +1,11 @@
 import sys
-
-from src.main.pin import Pin
+import unittest
 
 sys.path.append('../../')
-import unittest
-from src.main.motor import Motor
-from src.main.arm import Arm
+
+from src.main.domain.motor import Motor
+from src.main.domain.arm import Arm
+from src.main.domain.pin import Pin
 
 
 class TestArm(unittest.TestCase):

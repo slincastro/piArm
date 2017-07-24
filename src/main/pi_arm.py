@@ -1,12 +1,12 @@
 import sys
 sys.path.append('../../')
 
-from src.main.pin import Pin
+from src.main.domain.pin import Pin
 from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
-from src.main.motor import Motor
+from src.main.domain.motor import Motor
 from src.main.configuration.configuration import Configuration
-from src.main.arm import Arm
+from src.main.domain.arm import Arm
 
 Configuration().configure()
 executor = RPiExecutor()

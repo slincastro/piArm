@@ -1,13 +1,15 @@
 import sys
 import unittest
+
 from mock import MagicMock
+
 sys.path.append('../../')
-from src.main.motor import Motor
+from src.main.domain.motor import Motor
 from src.main.logic.control import Control
 from src.main.logic.converter import Converter
 from src.test.configuration.configuration_test import Configuration
 from src.main.Infra.rpiexecutor import RPiExecutor
-from src.main.pin import Pin
+from src.main.domain.pin import Pin
 
 
 class TestControl(unittest.TestCase):

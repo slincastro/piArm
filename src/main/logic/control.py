@@ -1,7 +1,6 @@
 import sys
 sys.path.append('../../')
 from src.main.logic.converter import Converter
-from src.main.pin import Pin
 import time
 
 
