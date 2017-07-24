@@ -1,8 +1,7 @@
 import sys
+sys.path.append('../../')
 
 from src.main.pin import Pin
-
-sys.path.append('../../')
 from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
 from src.main.motor import Motor
