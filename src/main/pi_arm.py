@@ -24,9 +24,9 @@ while True:
 
     print "Enter a Junture :"
     junture = raw_input(" < w | s | e | u | g | l > : ")
-    angle = raw_input("enter an angle <int> : ")
     print "Enter a direction"
-    direction = raw_input("< l | r | u | d > : ")
+    direction = raw_input("< l | r > < u | d > < o | c > < n | f > : ")
+    angle = raw_input("enter an angle <int> : ")
 
     motor = arm.get_motor(junture)
     control = Control(motor, executor, led)
@@ -39,7 +39,11 @@ while True:
         control.turn_left(float(angle))
     elif direction == "d":
         control.turn_right(float(angle))
-    elif direction == "o":
+    if direction == "o":
+        control.turn_left(float(angle))
+    elif direction == "c":
+        control.turn_right(float(angle))
+    elif direction == "n":
         control.turn_on_led()
     elif direction == "f":
         control.turn_off_led()
