@@ -1,14 +1,14 @@
 import sys
 import readline
 sys.path.append('../../')
-from src.main.Infra.executor import Executor
+from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
 from src.main.motor import Motor
 from src.main.configuration.configuration import Configuration
 from src.main.arm import Arm
 
 Configuration().configure()
-executor = Executor()
+executor = RPiExecutor()
 
 waist = Motor(13, 19)
 shoulder = Motor(23, 24)

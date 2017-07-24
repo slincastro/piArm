@@ -1,8 +1,7 @@
 import RPi.GPIO as GPIO
 
 
-
-class Executor:
+class RPiExecutor:
 
     def __init__(self):
         GPIO.setmode(GPIO.BCM)
@@ -17,6 +16,10 @@ class Executor:
         GPIO.setup(motor.pin_b, GPIO.OUT)
         GPIO.output(motor.pin_a, motor.input_a)
         GPIO.output(motor.pin_b, motor.input_b)
+
+    def go(self, pin):
+        GPIO.setup(pin.pin_number, GPIO.OUT)
+        GPIO.output(pin.pin_number, pin.pin_value)
 
 
 

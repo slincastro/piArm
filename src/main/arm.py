@@ -2,12 +2,17 @@
 
 class Arm:
 
-    def __init__(self, waist, shoulder, elbow, wrist, gripper):
+    def __init__(self, waist, shoulder, elbow, wrist, gripper, led):
+        self._led = led
         self._gripper = gripper
         self._wrist = wrist
         self._waist = waist
         self._shoulder = shoulder
         self._elbow = elbow
+
+    @property
+    def led(self):
+        return self._led
 
     @property
     def waist(self):
@@ -41,6 +46,10 @@ class Arm:
         elif param == "g":
             print "gripper is selected ..."
             return self._gripper
+
+        elif param == "l":
+            print "Led is selected .."
+            return self._led
 
         else:
             print "no motor selected ..."
