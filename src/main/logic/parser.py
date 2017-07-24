@@ -10,3 +10,13 @@ class Parser:
         joint_value = int(joint_attributes[2])
 
         return Joint(joint_name, joint_direction, joint_value)
+
+    def get_joints(self, joints_input):
+        primitive_joints = joints_input.split("-")
+        joints = []
+
+        for primitive_joint in primitive_joints:
+            joint = self.to_joint(primitive_joint)
+            joints.append(joint)
+
+        return joints

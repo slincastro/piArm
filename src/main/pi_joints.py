@@ -23,32 +23,33 @@ led = Pin(21)
 arm = Arm(waist, shoulder, elbow, wrist, gripper, led)
 
 while True:
-    primitive_joint = raw_input("enter a joint <name direction value>: ")
+    primitive_joints = raw_input("enter a joints <(name direction value) ... > : ")
 
     parser = Parser()
-    joint = parser.to_joint(primitive_joint)
+    joints = parser.to_joint(primitive_joints)
 
-    motor = arm.get_motor(joint.name)
+    for joint in joints:
+        motor = arm.get_motor(joint.name)
 
-    print "direction :" + joint.direction
+        print "direction :" + joint.direction
 
-    control = Control(motor, executor, led)
+        control = Control(motor, executor, led)
 
-    if joint.direction == "l":
-        control.turn_left(float(joint.value))
-    elif joint.direction == "r":
-        control.turn_right(float(joint.value))
-    if joint.direction == "u":
-        control.turn_left(float(joint.value))
-    elif joint.direction == "d":
-        control.turn_right(float(joint.value))
-    if joint.direction == "o":
-        control.turn_left(float(joint.value))
-    elif joint.direction == "c":
-        control.turn_right(float(joint.value))
-    elif joint.direction == "n":
-        control.turn_on_led()
-    elif joint.direction == "f":
-        control.turn_off_led()
-    else:
-        print "choose junture an direction again ."
+        if joint.direction == "l":
+            control.turn_left(float(joint.value))
+        elif joint.direction == "r":
+            control.turn_right(float(joint.value))
+        if joint.direction == "u":
+            control.turn_left(float(joint.value))
+        elif joint.direction == "d":
+            control.turn_right(float(joint.value))
+        if joint.direction == "o":
+            control.turn_left(float(joint.value))
+        elif joint.direction == "c":
+            control.turn_right(float(joint.value))
+        elif joint.direction == "n":
+            control.turn_on_led()
+        elif joint.direction == "f":
+            control.turn_off_led()
+        else:
+            print "choose junture an direction again ."
