@@ -26,7 +26,7 @@ while True:
     primitive_joints = raw_input("enter a joints <(name direction value) ... > : ")
 
     parser = Parser()
-    joints = parser.to_joint(primitive_joints)
+    joints = parser.get_joints(primitive_joints)
 
     for joint in joints:
         motor = arm.get_motor(joint.name)
