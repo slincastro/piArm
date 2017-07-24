@@ -1,9 +1,9 @@
 import sys
 
+sys.path.append('../../')
+
 from src.main.domain.pin import Pin
 from src.main.logic.parser import Parser
-
-sys.path.append('../../')
 from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
 from src.main.domain.motor import Motor

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0246ab6e-29da-4edc-b779-ca463f14f958" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/arm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/motor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/pi_arrow.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/pin.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/logic/control.py" afterPath="$PROJECT_DIR$/src/main/logic/control.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/pi_arm.py" afterPath="$PROJECT_DIR$/src/main/pi_arm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_arm.py" afterPath="$PROJECT_DIR$/src/test/test_arm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_control.py" afterPath="$PROJECT_DIR$/src/test/test_control.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_motor.py" afterPath="$PROJECT_DIR$/src/test/test_motor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_pin.py" afterPath="$PROJECT_DIR$/src/test/test_pin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/pi_joints.py" afterPath="$PROJECT_DIR$/src/main/pi_joints.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,11 +43,9 @@
       <file leaf-file-name="pi_joints.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/pi_joints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -851,11 +840,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/pi_joints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
