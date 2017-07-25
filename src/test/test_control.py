@@ -16,7 +16,7 @@ class TestControl(unittest.TestCase):
 
     def setUp(self):
         config = Configuration()
-        config.configure_test()
+        config.configure()
 
     def test_should_return_01_seconds(self):
         convert = Converter()

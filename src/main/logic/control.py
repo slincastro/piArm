@@ -11,6 +11,9 @@ class Control:
         self._executor = executor
         self._pin = pin
 
+    def set_motor(self, motor):
+        self._motor = motor
+
     def turn_left(self, degrees):
         print "move left " + str(degrees) + " degrees"
 
