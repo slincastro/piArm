@@ -31,3 +31,6 @@ class TestPin(unittest.TestCase):
         pin.off()
 
         self.assertFalse(pin.pin_value)
+
+if __name__ == '__main__':
+    unittest.main()

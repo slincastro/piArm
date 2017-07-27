@@ -10,6 +10,11 @@ class TestJoint(unittest.TestCase):
         expected_motor = Motor(1, 2)
         joint = Joint("w", "l", 10)
 
-        self.assertEquals(joint.name, "w")
+        current_name = joint.name
+
+        self.assertEquals(current_name, "w")
         self.assertEquals(joint.direction, "l")
         self.assertEquals(joint.value, 10)
+
+if __name__ == '__main__':
+    unittest.main()

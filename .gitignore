@@ -1,2 +1,5 @@
 *.pyc
 *.cfg
+.coverage
+/htmlcov
+/cover

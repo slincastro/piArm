@@ -37,3 +37,6 @@ class TestParser(unittest.TestCase):
         self.assertEquals(current_joints[1].direction, "r")
         self.assertEquals(current_joints[1].value, 10)
 
+if __name__ == '__main__':
+    unittest.main()
+

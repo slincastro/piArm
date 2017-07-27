@@ -1,6 +1,8 @@
 import sys
+
 sys.path.append('../../')
 
+from src.main.logic.parser import Parser
 from src.main.domain.pin import Pin
 from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
@@ -91,6 +93,16 @@ class PiArm:
         else:
             print "choose junture an direction again ."
 
+if __name__ == '__main__':
+    piarm = PiArm(None)
 
+    while True:
+        primitive_joints = raw_input("enter a joints <(name direction value) ... > : ")
+
+        parser = Parser()
+        joints = parser.get_joints(primitive_joints)
+
+        for joint in joints:
+            piarm.execute_joint(joint)
 
 

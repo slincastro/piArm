@@ -98,3 +98,6 @@ class TestArm(unittest.TestCase):
 
         self.assertIsNone(current_waist)
 
+if __name__ == '__main__':
+    unittest.main()
+

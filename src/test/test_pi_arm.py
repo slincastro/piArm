@@ -69,6 +69,38 @@ class TestPiArm(unittest.TestCase):
 
         control.turn_left.assert_called_with(expected_joint_value)
 
+    def test_should_execute_waist_right(self):
+
+        input_joint = Joint("w", "r", 10)
+
+        Configuration().configure()
+        self._executor = RPiExecutor()
+        expected_joint_value = float(10)
+
+        waist = Motor(13, 19)
+        shoulder = Motor(23, 24)
+        elbow = Motor(17, 27)
+        wrist = Motor(16, 20)
+        gripper = Motor(5, 6)
+        led = Pin(21)
+
+        arm = Arm(waist, shoulder, elbow, wrist, gripper, led)
+        self._arm = arm
+        self._led = led
+
+        control = Control(None, self._executor, self._led)
+
+        pi_arm = PiArm(control)
+        control.turn_right = MagicMock()
+
+        pi_arm.execute_joint(input_joint)
+
+        control.turn_right.assert_called_with(expected_joint_value)
+
+
+if __name__ == '__main__':
+    unittest.main()
+
 
 
 
