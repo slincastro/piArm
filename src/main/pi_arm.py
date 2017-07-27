@@ -64,45 +64,20 @@ class PiArm:
         else:
             print "choose junture an direction again ."
 
-    def main(self):
-        print "Enter a Junture :"
-        junture = raw_input(" < w | s | e | u | g | l > : ")
-        print "Enter a direction"
-        direction = raw_input("< l | r > < u | d > < o | c > < n | f > : ")
-        angle = raw_input("enter an angle <int> : ")
-
-        motor = self._arm.get_motor(junture)
-        control = Control(motor, self._executor, self._led)
-
-        if direction == "l":
-            control.turn_left(float(angle))
-        elif direction == "r":
-            control.turn_right(float(angle))
-        if direction == "u":
-            control.turn_left(float(angle))
-        elif direction == "d":
-            control.turn_right(float(angle))
-        if direction == "o":
-            control.turn_left(float(angle))
-        elif direction == "c":
-            control.turn_right(float(angle))
-        elif direction == "n":
-            control.turn_on_led()
-        elif direction == "f":
-            control.turn_off_led()
-        else:
-            print "choose junture an direction again ."
-
-if __name__ == '__main__':
-    piarm = PiArm(None)
-
-    while True:
-        primitive_joints = raw_input("enter a joints <(name direction value) ... > : ")
-
+    def parse_joints(self, primitive_joints):
         parser = Parser()
         joints = parser.get_joints(primitive_joints)
 
         for joint in joints:
-            piarm.execute_joint(joint)
+            piarm.execute_joint(None)
+
+
+if __name__ == '__main__':  # pragma: no cover
+    piarm = PiArm(None)
+
+    while True:
+        input_primitive_joints = raw_input("enter a joints <(name direction value) ... > : ")
+        piarm.parse_joints(input_primitive_joints)
+
 
 
