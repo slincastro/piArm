@@ -13,16 +13,41 @@ class Robot(Resource):
     def get(self):
         return {'robot': 'hola como tai ...'}  # Fetches first column that is Employee ID
 
-class Move(Resource):
+class Up(Resource):
+    def get(self):
+        piarm = PiArm(None)
+        input_primitive_joints = "s u 20"
+        piarm.parse_joints(input_primitive_joints)
+        return {'robot': 'move'}
+
+class Down(Resource):
+    def get(self):
+        piarm = PiArm(None)
+        input_primitive_joints = "s d 20"
+        piarm.parse_joints(input_primitive_joints)
+        return {}
+
+class Right(Resource):
+    def get(self):
+        piarm = PiArm(None)
+        input_primitive_joints = "w r 20"
+        piarm.parse_joints(input_primitive_joints)
+        return {}
+
+class Left(Resource):
     def get(self):
         piarm = PiArm(None)
         input_primitive_joints = "w l 20"
         piarm.parse_joints(input_primitive_joints)
-        return {'robot': 'move'}
+        return {}
 
 api.add_resource(Robot, '/hola')  # Route_1
-api.add_resource(Move, '/move')  # Route_1
+api.add_resource(Up, '/up')  # Route_1
+api.add_resource(Down, '/down')
+api.add_resource(Right, '/right')
+api.add_resource(Left, '/left')
+
 
 if __name__ == '__main__':
-    app.run(port='5002')
+    app.run(port='5002',host='0.0.0.0')
 
