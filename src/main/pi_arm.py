@@ -69,7 +69,7 @@ class PiArm:
         joints = parser.get_joints(primitive_joints)
 
         for joint in joints:
-            piarm.execute_joint(None)
+            self.execute_joint(joint)
 
 
 if __name__ == '__main__':  # pragma: no cover
