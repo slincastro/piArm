@@ -1,3 +1,8 @@
 - creando un rest service en python
 - pip install web.py no funciono
--
+-source virtualenv
+- virtual env
+-instalar virtualenv
+-instalar pip install python-dev
+-pip install flask flask-jsonpify flask-sqlalchemy flask-restful
+-pip install gpio
