@@ -6,11 +6,11 @@ class Pin:
         self._value = False
 
     @property
-    def pin_number(self):
+    def number(self):
         return self._pin
 
     @property
-    def pin_value(self):
+    def value(self):
         return self._value
 
     def on(self):

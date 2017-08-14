@@ -29,17 +29,17 @@ class TestPiArm(unittest.TestCase):
         pi_arm = PiArm(None)
         current_arm = pi_arm._arm
 
-        self.assertEquals(current_arm.waist.pin_a, expected_arm.waist.pin_a)
-        self.assertEquals(current_arm.waist.pin_b, expected_arm.waist.pin_b)
-        self.assertEquals(current_arm.shoulder.pin_a, expected_arm.shoulder.pin_a)
-        self.assertEquals(current_arm.shoulder.pin_b, expected_arm.shoulder.pin_b)
-        self.assertEquals(current_arm.elbow.pin_a, expected_arm.elbow.pin_a)
-        self.assertEquals(current_arm.elbow.pin_b, expected_arm.elbow.pin_b)
-        self.assertEquals(current_arm.wrist.pin_a, expected_arm.wrist.pin_a)
-        self.assertEquals(current_arm.wrist.pin_b, expected_arm.wrist.pin_b)
-        self.assertEquals(current_arm.gripper.pin_a, expected_arm.gripper.pin_a)
-        self.assertEquals(current_arm.gripper.pin_b, expected_arm.gripper.pin_b)
-        self.assertEquals(current_arm.led.pin_number, expected_arm.led.pin_number)
+        self.assertEquals(current_arm.waist.pin_a.number, expected_arm.waist.pin_a.number)
+        self.assertEquals(current_arm.waist.pin_b.number, expected_arm.waist.pin_b.number)
+        self.assertEquals(current_arm.shoulder.pin_a.number, expected_arm.shoulder.pin_a.number)
+        self.assertEquals(current_arm.shoulder.pin_b.number, expected_arm.shoulder.pin_b.number)
+        self.assertEquals(current_arm.elbow.pin_a.number, expected_arm.elbow.pin_a.number)
+        self.assertEquals(current_arm.elbow.pin_b.number, expected_arm.elbow.pin_b.number)
+        self.assertEquals(current_arm.wrist.pin_a.number, expected_arm.wrist.pin_a.number)
+        self.assertEquals(current_arm.wrist.pin_b.number, expected_arm.wrist.pin_b.number)
+        self.assertEquals(current_arm.gripper.pin_a.number, expected_arm.gripper.pin_a.number)
+        self.assertEquals(current_arm.gripper.pin_b.number, expected_arm.gripper.pin_b.number)
+        self.assertEquals(current_arm.led.number, expected_arm.led.number)
 
     def test_should_execute_waist_left(self):
 

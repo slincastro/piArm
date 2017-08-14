@@ -8,39 +8,39 @@ class TestMotor(unittest.TestCase):
 
     def test_should_turn_left(self):
         shoulder = Motor(0, 0)
-        shoulder.left()
-        self.assertEqual(True, shoulder.input_a)
-        self.assertEqual(False, shoulder.input_b)
+        shoulder.turn_left()
+        self.assertEqual(True, shoulder.pin_a.value)
+        self.assertEqual(False, shoulder.pin_b.value)
 
     def test_should_turn_right(self):
         shoulder = Motor(0, 0)
-        shoulder.right()
-        self.assertEqual(True, shoulder.input_b)
-        self.assertEqual(False, shoulder.input_a)
+        shoulder.turn_right()
+        self.assertEqual(True, shoulder.pin_b.value)
+        self.assertEqual(False, shoulder.pin_a.value)
 
     def test_should_turn_Left_and_then_turn_right(self):
         shoulder = Motor(0, 0)
 
-        shoulder.right()
-        self.assertEqual(True, shoulder.input_b)
-        self.assertEqual(False, shoulder.input_a)
+        shoulder.turn_right()
+        self.assertEqual(True, shoulder.pin_b.value)
+        self.assertEqual(False, shoulder.pin_a.value)
 
-        shoulder.left()
-        self.assertEqual(True, shoulder.input_a)
-        self.assertEqual(False, shoulder.input_b)
+        shoulder.turn_left()
+        self.assertEqual(True, shoulder.pin_a.value)
+        self.assertEqual(False, shoulder.pin_b.value)
 
     def test_should_stop_motor(self):
         motor = Motor(0, 0)
-        motor.left()
+        motor.turn_left()
         motor.stop()
-        self.assertEqual(False, motor.input_a)
-        self.assertEqual(False, motor.input_b)
+        self.assertEqual(False, motor.pin_a.value)
+        self.assertEqual(False, motor.pin_b.value)
 
-    def test_should_be_pin1(self):
+    def test_should_be_pin1_and2_when_configure_motor(self):
         motor = Motor(1, 2)
 
-        self.assertEqual(1, motor.pin_a)
-        self.assertEqual(2, motor.pin_b)
+        self.assertEqual(1, motor.pin_a.number)
+        self.assertEqual(2, motor.pin_b.number)
 
 if __name__ == '__main__':
     unittest.main()

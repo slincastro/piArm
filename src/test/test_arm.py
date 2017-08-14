@@ -15,10 +15,10 @@ class TestArm(unittest.TestCase):
         waist = Motor(13, 19)
         arm = Arm(waist, None, None, None, None, None)
 
-        self.assertEquals(expected_motor.input_a, arm.waist.input_a)
-        self.assertEquals(expected_motor.input_b, arm.waist.input_b)
-        self.assertEquals(expected_motor.pin_a, arm.waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, arm.waist.pin_b)
+        self.assertEquals(expected_motor.pin_a.number, arm.waist.pin_a.number)
+        self.assertEquals(expected_motor.pin_b.number, arm.waist.pin_b.number)
+        self.assertEquals(expected_motor.pin_a.value, arm.waist.pin_a.value)
+        self.assertEquals(expected_motor.pin_b.value, arm.waist.pin_b.value)
 
     def test_should_return_waist_motor(self):
         expected_motor = Motor(13, 19)
@@ -27,10 +27,10 @@ class TestArm(unittest.TestCase):
 
         current_waist = arm.get_motor("w")
 
-        self.assertEquals(expected_motor.input_a, current_waist.input_a)
-        self.assertEquals(expected_motor.input_b, current_waist.input_b)
-        self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
+        self.assertEquals(expected_motor.pin_a.number, current_waist.pin_a.number)
+        self.assertEquals(expected_motor.pin_b.number, current_waist.pin_b.number)
+        self.assertEquals(expected_motor.pin_a.value, current_waist.pin_a.value)
+        self.assertEquals(expected_motor.pin_b.value, current_waist.pin_b.value)
 
     def test_should_return_shoulder_motor(self):
         expected_motor = Motor(23, 24)
@@ -39,10 +39,10 @@ class TestArm(unittest.TestCase):
 
         current_waist = arm.get_motor("s")
 
-        self.assertEquals(expected_motor.input_a, current_waist.input_a)
-        self.assertEquals(expected_motor.input_b, current_waist.input_b)
-        self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
+        self.assertEquals(expected_motor.pin_a.number, current_waist.pin_a.number)
+        self.assertEquals(expected_motor.pin_b.number, current_waist.pin_b.number)
+        self.assertEquals(expected_motor.pin_a.value, current_waist.pin_a.value)
+        self.assertEquals(expected_motor.pin_b.value, current_waist.pin_b.value)
 
     def test_should_return_elbow_motor(self):
         expected_motor = Motor(17, 27)
@@ -51,10 +51,10 @@ class TestArm(unittest.TestCase):
 
         current_waist = arm.get_motor("e")
 
-        self.assertEquals(expected_motor.input_a, current_waist.input_a)
-        self.assertEquals(expected_motor.input_b, current_waist.input_b)
-        self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
+        self.assertEquals(expected_motor.pin_a.number, current_waist.pin_a.number)
+        self.assertEquals(expected_motor.pin_b.number, current_waist.pin_b.number)
+        self.assertEquals(expected_motor.pin_a.value, current_waist.pin_a.value)
+        self.assertEquals(expected_motor.pin_b.value, current_waist.pin_b.value)
 
     def test_should_return_wrist_motor(self):
         expected_motor = Motor(16, 20)
@@ -63,10 +63,10 @@ class TestArm(unittest.TestCase):
 
         current_waist = arm.get_motor("u")
 
-        self.assertEquals(expected_motor.input_a, current_waist.input_a)
-        self.assertEquals(expected_motor.input_b, current_waist.input_b)
-        self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
+        self.assertEquals(expected_motor.pin_a.number, current_waist.pin_a.number)
+        self.assertEquals(expected_motor.pin_b.number, current_waist.pin_b.number)
+        self.assertEquals(expected_motor.pin_a.value, current_waist.pin_a.value)
+        self.assertEquals(expected_motor.pin_b.value, current_waist.pin_b.value)
 
     def test_should_return_gripper_motor(self):
         expected_motor = Motor(5, 6)
@@ -75,10 +75,10 @@ class TestArm(unittest.TestCase):
 
         current_waist = arm.get_motor("g")
 
-        self.assertEquals(expected_motor.input_a, current_waist.input_a)
-        self.assertEquals(expected_motor.input_b, current_waist.input_b)
-        self.assertEquals(expected_motor.pin_a, current_waist.pin_a)
-        self.assertEquals(expected_motor.pin_b, current_waist.pin_b)
+        self.assertEquals(expected_motor.pin_a.number, current_waist.pin_a.number)
+        self.assertEquals(expected_motor.pin_b.number, current_waist.pin_b.number)
+        self.assertEquals(expected_motor.pin_a.value, current_waist.pin_a.value)
+        self.assertEquals(expected_motor.pin_b.value, current_waist.pin_b.value)
 
     def test_should_return_led(self):
         expected_led = Pin(21)
@@ -88,8 +88,8 @@ class TestArm(unittest.TestCase):
 
         current_led = arm.get_motor("l")
 
-        self.assertEquals(expected_led.pin_value, current_led.pin_value)
-        self.assertEquals(expected_led.pin_number, current_led.pin_number)
+        self.assertEquals(expected_led.value, current_led.value)
+        self.assertEquals(expected_led.number, current_led.number)
 
     def test_should_return_none_motor(self):
         waist = Motor(13, 19)

@@ -18,8 +18,8 @@ class RPiExecutor:
         GPIO.output(motor.pin_b, motor.input_b)
 
     def go(self, pin):
-        GPIO.setup(pin.pin_number, GPIO.OUT)
-        GPIO.output(pin.pin_number, pin.pin_value)
+        GPIO.setup(pin.number, GPIO.OUT)
+        GPIO.output(pin.number, pin.value)
 
 
 

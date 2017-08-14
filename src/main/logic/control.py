@@ -17,13 +17,13 @@ class Control:
     def turn_left(self, degrees):
         print "move left " + str(degrees) + " degrees"
 
-        self._motor.left()
+        self._motor.turn_left()
         self.go_move(degrees)
 
     def turn_right(self, degrees):
         print "move right " + str(degrees) + " degrees"
 
-        self._motor.right()
+        self._motor.turn_right()
         self.go_move(degrees)
 
     def go_move(self, degrees):
