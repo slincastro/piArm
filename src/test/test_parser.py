@@ -1,13 +1,13 @@
 import unittest
 
-from src.main.domain.joint import Joint
+from src.main.domain.joint_partial import Joint_partial
 from src.main.logic.parser import Parser
 
 
 class TestParser(unittest.TestCase):
 
     def test_should_return_joint(self):
-        expected_joint = Joint("w", "o", 10)
+        expected_joint = Joint_partial("w", "o", 10)
         parser = Parser()
         primitive_joint = "w o 10"
         current_join = parser.to_joint(primitive_joint)

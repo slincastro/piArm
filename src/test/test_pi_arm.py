@@ -8,7 +8,7 @@ from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
 from src.test.configuration.configuration_test import Configuration
 from src.main.domain.arm import Arm
-from src.main.domain.joint import Joint
+from src.main.domain.joint_partial import Joint_partial
 from src.main.pi_arm import PiArm
 from src.main.domain.pin import Pin
 from src.main.domain.motor import Motor
@@ -43,7 +43,7 @@ class TestPiArm(unittest.TestCase):
 
     def test_should_execute_waist_left(self):
 
-        input_joint = Joint("w", "l", 10)
+        input_joint = Joint_partial("w", "l", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -54,7 +54,7 @@ class TestPiArm(unittest.TestCase):
 
     def test_should_execute_waist_right(self):
 
-        input_joint = Joint("w", "r", 10)
+        input_joint = Joint_partial("w", "r", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -65,7 +65,7 @@ class TestPiArm(unittest.TestCase):
         control.turn_right.assert_called_with(expected_joint_value)
 
     def test_should_execute_gripper_open(self):
-        input_joint = Joint("g", "o", 10)
+        input_joint = Joint_partial("g", "o", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -76,7 +76,7 @@ class TestPiArm(unittest.TestCase):
         control.turn_left.assert_called_with(expected_joint_value)
 
     def test_should_execute_gripper_close(self):
-        input_joint = Joint("g", "c", 10)
+        input_joint = Joint_partial("g", "c", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -87,7 +87,7 @@ class TestPiArm(unittest.TestCase):
         control.turn_right.assert_called_with(expected_joint_value)
 
     def test_should_execute_elbow_down(self):
-        input_joint = Joint("e", "d", 10)
+        input_joint = Joint_partial("e", "d", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -98,7 +98,7 @@ class TestPiArm(unittest.TestCase):
         control.turn_right.assert_called_with(expected_joint_value)
 
     def test_should_execute_elbow_up(self):
-        input_joint = Joint("e", "u", 10)
+        input_joint = Joint_partial("e", "u", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -109,7 +109,7 @@ class TestPiArm(unittest.TestCase):
         control.turn_left.assert_called_with(expected_joint_value)
 
     def test_should_execute_led_on(self):
-        input_joint = Joint("l", "n", 10)
+        input_joint = Joint_partial("l", "n", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -120,7 +120,7 @@ class TestPiArm(unittest.TestCase):
         control.turn_on_led.assert_called_with()
 
     def test_should_execute_led_off(self):
-        input_joint = Joint("l", "f", 10)
+        input_joint = Joint_partial("l", "f", 10)
         expected_joint_value = float(10)
 
         control, pi_arm = self.pi_arm_configuration()
@@ -148,7 +148,7 @@ class TestPiArm(unittest.TestCase):
 
         input_primitive_joints = "g c 10"
         pi_arm.execute_joint = MagicMock()
-        expected_joint = Joint("g", "c", 10)
+        expected_joint = Joint_partial("g", "c", 10)
 
         pi_arm.parse_joints(input_primitive_joints)
 

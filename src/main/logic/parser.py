@@ -1,4 +1,4 @@
-from src.main.domain.joint import Joint
+from src.main.domain.joint_partial import Joint_partial
 
 
 class Parser:
@@ -9,7 +9,7 @@ class Parser:
         joint_direction = joint_attributes[1]
         joint_value = int(joint_attributes[2])
 
-        return Joint(joint_name, joint_direction, joint_value)
+        return Joint_partial(joint_name, joint_direction, joint_value)
 
     def get_joints(self, joints_input):
         primitive_joints = joints_input.split("-")

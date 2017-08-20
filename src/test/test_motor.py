@@ -11,12 +11,14 @@ class TestMotor(unittest.TestCase):
         shoulder.turn_left()
         self.assertEqual(True, shoulder.pin_a.value)
         self.assertEqual(False, shoulder.pin_b.value)
+        self.assertTrue(shoulder.is_on())
 
     def test_should_turn_right(self):
         shoulder = Motor(0, 0)
         shoulder.turn_right()
         self.assertEqual(True, shoulder.pin_b.value)
         self.assertEqual(False, shoulder.pin_a.value)
+        self.assertTrue(shoulder.is_on())
 
     def test_should_turn_Left_and_then_turn_right(self):
         shoulder = Motor(0, 0)
@@ -29,12 +31,15 @@ class TestMotor(unittest.TestCase):
         self.assertEqual(True, shoulder.pin_a.value)
         self.assertEqual(False, shoulder.pin_b.value)
 
+        self.assertTrue(shoulder.is_on())
+
     def test_should_stop_motor(self):
         motor = Motor(0, 0)
         motor.turn_left()
         motor.stop()
         self.assertEqual(False, motor.pin_a.value)
         self.assertEqual(False, motor.pin_b.value)
+        self.assertFalse(motor.is_on())
 
     def test_should_be_pin1_and2_when_configure_motor(self):
         motor = Motor(1, 2)
