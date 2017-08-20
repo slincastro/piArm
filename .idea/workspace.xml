@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0246ab6e-29da-4edc-b779-ca463f14f958" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/domain/encoder.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/domain/horizontal_joint.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/domain/joint_partial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/test_encoder.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/test_horizontal_joint.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/test_joint_partial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/joint.py" afterPath="$PROJECT_DIR$/src/main/domain/joint.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/motor.py" afterPath="$PROJECT_DIR$/src/main/domain/motor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/pin.py" afterPath="$PROJECT_DIR$/src/main/domain/pin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/logic/parser.py" afterPath="$PROJECT_DIR$/src/main/logic/parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_joint.py" afterPath="$PROJECT_DIR$/src/test/test_joint.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_motor.py" afterPath="$PROJECT_DIR$/src/test/test_motor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_parser.py" afterPath="$PROJECT_DIR$/src/test/test_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_pi_arm.py" afterPath="$PROJECT_DIR$/src/test/test_pi_arm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domain/horizontal_joint.py" afterPath="$PROJECT_DIR$/src/main/domain/horizontal_joint.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test_horizontal_joint.py" afterPath="$PROJECT_DIR$/src/test/test_horizontal_joint.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,16 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/domain/pin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="motor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/domain/motor.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_horizontal_joint.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_horizontal_joint.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/test_horizontal_joint.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+              <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -122,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="horizontal_joint.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="horizontal_joint.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/domain/horizontal_joint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -137,7 +114,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
+              <folding>
+                <marker date="1503189682000" expanded="true" signature="130:1476" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,10 +188,10 @@
         <option value="$PROJECT_DIR$/src/test/test_joint.py" />
         <option value="$PROJECT_DIR$/src/test/horizontal_joint.py" />
         <option value="$PROJECT_DIR$/src/main/domain/joint.py" />
-        <option value="$PROJECT_DIR$/src/main/domain/horizontal_joint.py" />
         <option value="$PROJECT_DIR$/src/test/test_motor.py" />
         <option value="$PROJECT_DIR$/src/main/domain/motor.py" />
         <option value="$PROJECT_DIR$/src/test/test_horizontal_joint.py" />
+        <option value="$PROJECT_DIR$/src/main/domain/horizontal_joint.py" />
       </list>
     </option>
   </component>
@@ -605,13 +584,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/configuration/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Infra/rpiexecutor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -623,6 +595,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -762,6 +735,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -904,19 +878,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/domain/horizontal_joint.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test_motor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
+          <folding>
+            <marker date="1503189682000" expanded="true" signature="130:1476" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -928,13 +896,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="413" column="8" lean-forward="false" selection-start-line="413" selection-start-column="8" selection-end-line="413" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test_horizontal_joint.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/domain/horizontal_joint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
