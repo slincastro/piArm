@@ -13,3 +13,5 @@ class HorizontalJoint(Joint):
             self.motor.stop()
         else:
             self.motor.turn_right()
+
+
