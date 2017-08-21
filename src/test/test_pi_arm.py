@@ -7,7 +7,7 @@ sys.path.append('../../')
 from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
 from src.test.configuration.configuration_test import Configuration
-from src.main.domain.arm import Arm
+from src.main.domain.arm_partial import Arm_partial
 from src.main.domain.joint_partial import Joint_partial
 from src.main.pi_arm import PiArm
 from src.main.domain.pin import Pin
@@ -24,7 +24,7 @@ class TestPiArm(unittest.TestCase):
         expected_gripper = Motor(5, 6)
         expected_led = Pin(21)
 
-        expected_arm = Arm(expected_waist, expected_shoulder, expected_elbow, expected_wrist, expected_gripper, expected_led)
+        expected_arm = Arm_partial(expected_waist, expected_shoulder, expected_elbow, expected_wrist, expected_gripper, expected_led)
 
         pi_arm = PiArm(None)
         current_arm = pi_arm._arm
@@ -140,7 +140,7 @@ class TestPiArm(unittest.TestCase):
         wrist = Motor(16, 20)
         gripper = Motor(5, 6)
         led = Pin(21)
-        arm = Arm(waist, shoulder, elbow, wrist, gripper, led)
+        arm = Arm_partial(waist, shoulder, elbow, wrist, gripper, led)
         self._arm = arm
         self._led = led
         control = Control(None, self._executor, self._led)
@@ -164,7 +164,7 @@ class TestPiArm(unittest.TestCase):
         wrist = Motor(16, 20)
         gripper = Motor(5, 6)
         led = Pin(21)
-        arm = Arm(waist, shoulder, elbow, wrist, gripper, led)
+        arm = Arm_partial(waist, shoulder, elbow, wrist, gripper, led)
         self._arm = arm
         self._led = led
         control = Control(None, self._executor, self._led)

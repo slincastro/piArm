@@ -8,7 +8,7 @@ from src.main.Infra.rpiexecutor import RPiExecutor
 from src.main.logic.control import Control
 from src.main.domain.motor import Motor
 from src.main.configuration.configuration import Configuration
-from src.main.domain.arm import Arm
+from src.main.domain.arm_partial import Arm_partial
 
 Configuration().configure()
 executor = RPiExecutor()
@@ -20,7 +20,7 @@ wrist = Motor(16, 20)
 gripper = Motor(5, 6)
 led = Pin(21)
 
-arm = Arm(waist, shoulder, elbow, wrist, gripper, led)
+arm = Arm_partial(waist, shoulder, elbow, wrist, gripper, led)
 
 while True:
     primitive_joint = raw_input("enter a joint <name direction value>: ")
