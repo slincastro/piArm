@@ -16,3 +16,12 @@ class Gripper:
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
 
+    def close(self):
+        self.motor.turn_left()
+
+    def open(self):
+        self.motor.turn_right()
+
+    def gripped(self):
+        self.motor.stop()
+        self._has_gripped = True
