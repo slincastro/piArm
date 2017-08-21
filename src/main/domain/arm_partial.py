@@ -1,7 +1,4 @@
-
-
 class Arm_partial:
-
     def __init__(self, waist, shoulder, elbow, wrist, gripper, led):
         self._led = led
         self._gripper = gripper
@@ -66,4 +63,3 @@ class Arm_partial:
         else:
             print "no motor selected ..."
             return None
-
