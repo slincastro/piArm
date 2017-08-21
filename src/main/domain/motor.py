@@ -33,11 +33,12 @@ class Motor:
         self.pin_b.off()
         self._is_on = False
 
+    def is_on(self):
+        return self._is_on
+
     def __str__(self):
         return str(self.__dict__)
 
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
 
-    def is_on(self):
-        return self._is_on

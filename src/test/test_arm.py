@@ -1,6 +1,7 @@
 import sys
 import unittest
 
+from src.main.domain.gripper import Gripper
 from src.main.domain.vertical_joint import VerticalJoint
 
 sys.path.append('../../')
@@ -26,7 +27,7 @@ class TestArm(unittest.TestCase):
 
         expected_waist = HorizontalJoint(expected_joint_id, expected_joint_name, expected_motor, expected_encoder_value)
 
-        arm = Arm(waist, None)
+        arm = Arm(waist, None, None)
 
         self.assertEquals(arm.waist, expected_waist)
 
@@ -41,7 +42,7 @@ class TestArm(unittest.TestCase):
         expected_shoulder = VerticalJoint(expected_shoulder_id, expected_shoulder_name, expected_motor,
                                           expected_encoder_value)
 
-        arm = Arm(None, vertical_joints)
+        arm = Arm(None, vertical_joints, None)
 
         self.assertEquals(arm.get_vertical_joint(expected_shoulder_id), expected_shoulder)
 
@@ -56,7 +57,7 @@ class TestArm(unittest.TestCase):
         expected_elbow = VerticalJoint(expected_elbow_id, expected_joint_name, expected_motor,
                                        expected_encoder_value)
 
-        arm = Arm(None, vertical_joints)
+        arm = Arm(None, vertical_joints, None)
 
         self.assertEquals(arm.get_vertical_joint(expected_elbow_id), expected_elbow)
 
@@ -71,9 +72,20 @@ class TestArm(unittest.TestCase):
         expected_elbow = VerticalJoint(expected_wrist_id, expected_wrist_name, expected_motor,
                                        expected_encoder_value)
 
-        arm = Arm(None, vertical_joints)
+        arm = Arm(None, vertical_joints, None)
 
         self.assertEquals(arm.get_vertical_joint(expected_wrist_id), expected_elbow)
+
+    def test_shoul_return_gripper(self):
+        gripper_motor = Motor(1, 2)
+        gripper = Gripper(gripper_motor)
+
+        expected_gripper__motor = Motor(1, 2)
+        expected_gripper = Gripper(expected_gripper__motor)
+
+        arm = Arm(None, None, gripper)
+
+        self.assertEquals(arm.gripper, expected_gripper)
 
     def get_vertical_joints(self):
         current_joint_id = "e"
