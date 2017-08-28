@@ -112,7 +112,7 @@ class TestArm(unittest.TestCase):
                               current_wrist_encoder_value)
 
         vertical_joints = [elbow, shoulder, wrist]
-
+ 
         return vertical_joints
 
 
