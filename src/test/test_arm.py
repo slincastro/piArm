@@ -111,8 +111,8 @@ class TestArm(unittest.TestCase):
         wrist = VerticalJoint(current_wrist_joint_id, current_wrist_joint_name, current_wrist_motor,
                               current_wrist_encoder_value)
 
-        vertical_joints = [elbow, shoulder, wrist]
- 
+        vertical_joints = [elbow, shoulder, wrist] 
+
         return vertical_joints
 
 
